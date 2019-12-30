@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const buttonStyles = css`
   background-color: #3c64b1;
@@ -7,6 +7,12 @@ const buttonStyles = css`
 
   &:hover {
     background-color: #2a467b;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 0 10px 10px;
+    margin-bottom: 10px;
+    margin-left: 16px;
   }
 `;
 
@@ -17,6 +23,12 @@ const invertedButtonStyles = css`
 
   &:hover {
     color: #2a467b;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 0 10px 10px;
+    margin-bottom: 10px;
+    margin-left: 16px;
   }
 `;
 
@@ -46,14 +58,14 @@ export const CustomButtonContainer = styled.button`
   height: 42px;
   letter-spacing: 0.5px;
   line-height: 42px;
-  padding: 0px 35px 35px;
-  margin-right: 60px;
+  padding: 0px 30px 30px;
   font-size: 16px;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   font-weight: bold;
   cursor: pointer;
   display: flex;
   justify-content: center;
+  margin-right: 10px;
 
   ${getButtonStyles}
 `;

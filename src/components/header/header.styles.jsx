@@ -1,71 +1,35 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
-  height: 88px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background-color: #e2e5e6;
-
-  @media screen and (max-width: 800px) {
-    height: 60px;
-    padding: 10px;
+export const Styles = styled.div`
+  .navbar {
+    background-color: #e2e5e6;
   }
-`;
 
-export const LogoContainer = styled(Link)`
-  margin-left: 80px;
-  margin-top: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 24px;
-  font-family: "Lato", sans-serif;
-  color: #3c64b1;
-  text-transform: uppercase;
+  .navbar-brand {
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #3c64b1;
+    margin-left: 16px;
+  }
 
-  @media screen and (max-width: 800px) {
+  .navbar-toggler {
+    border: none;
+  }
+
+  a,
+  .navbar-nav .nav-item .nav-link {
     font-size: 18px;
-    width: 60%;
-    height: 100%;
-    display: flex;
-    margin: 0px 10px 0px 10px;
-    align-items: center;
-  }
-`;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 16px;
+    margin-right: 10px;
 
-export const OptionsContainer = styled.div`
-  height: 100%;
-  display: flex;
-  align-items: center;
-  float: right;
-
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
-`;
-
-export const OptionItem = styled(Link)`
-  font-weight: 600;
-  padding-right: 60px;
-  cursor: pointer;
-  font-size: 18px;
-  font-family: "Lato", sans-serif;
-  color: black;
-
-  .last-child {
-    padding-right: 10px;
-  }
-`;
-
-export const MenuItem = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 60px;
-  cursor: pointer;
-
-  @media screen and (max-width: 800px) {
-    width: 40%;
+    &:hover {
+      color: #3c64b1;
+      text-decoration: none;
+    }
   }
 `;

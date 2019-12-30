@@ -1,32 +1,37 @@
-import React from "react";
+import React from 'react';
 
-import { ReactComponent as Menu } from "../../assets/menu.svg";
+import { Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-import CustomButton from "../custom-button/custom-button.component";
+import CustomButton from '../custom-button/custom-button.component';
 
-import {
-  HeaderContainer,
-  LogoContainer,
-  OptionItem,
-  OptionsContainer,
-  MenuItem
-} from "./header.styles";
+import { Styles } from './header.styles';
 
 const Header = () => (
-  <HeaderContainer>
-    <LogoContainer to="/">Medical Clinic</LogoContainer>
-    <OptionsContainer>
-      <OptionItem to="/staff"> STAFF </OptionItem>
-      <OptionItem to="/contact"> CONTACT </OptionItem>
-      <CustomButton type="button" inverted>
-        Sign In
-      </CustomButton>
-      <CustomButton type="button">Sign Up</CustomButton>
-      <MenuItem>
-        <Menu className="menu" />
-      </MenuItem>
-    </OptionsContainer>
-  </HeaderContainer>
+  <Styles>
+    <Navbar expand="lg">
+      <Navbar.Brand href="/">MEDICAL CLINIC</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="ml-auto">
+          <Nav.Item>
+            <Nav.Link>
+              <Link to="/staff">Staff</Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link to="/contact">Contact</Link>
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
+        <CustomButton type="button" inverted>
+          Sign In
+        </CustomButton>
+        <CustomButton type="button">Sign Up</CustomButton>
+      </Navbar.Collapse>
+    </Navbar>
+  </Styles>
 );
 
 export default Header;
