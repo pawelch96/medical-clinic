@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+export const Styles = styled.div``;
 
 export const MainPageContainer = styled.div`
   height: 672px;
@@ -35,7 +37,7 @@ export const TextContainer = styled.div`
 export const TextTitle = styled.h2`
   margin: 10px 18px;
   font-size: 44px;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   display: block;
   text-align: left;
   padding-left: 25px;
@@ -44,7 +46,7 @@ export const TextTitle = styled.h2`
 
 export const TextHeader = styled.span`
   margin: 10px 18px;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   font-weight: 900;
   font-size: 14px;
   text-transform: uppercase;
@@ -57,7 +59,7 @@ export const TextHeader = styled.span`
 
 export const TextContent = styled.span`
   margin: 10px 18px;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 16px;
   color: black;
   display: block;
