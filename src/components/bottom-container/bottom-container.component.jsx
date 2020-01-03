@@ -2,19 +2,9 @@ import React from 'react';
 
 import { Container, Image, Row, Col } from 'react-bootstrap';
 
-import {
-  BottomPageContainer,
-  ImageContainer,
-  // Image,
-  Styles
-} from './bottom-container.styles';
+import { Styles } from './bottom-container.styles';
 
 const BottomContainer = () => (
-  // <BottomPageContainer>
-  //   <ImageContainer>
-  //     <Image src="https://i.ibb.co/xXQVbGK/stethoscope.jpg" />
-  //   </ImageContainer>
-  // </BottomPageContainer>
   <Styles>
     <Container fluid>
       <Row>
