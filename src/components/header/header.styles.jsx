@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Styles = styled.div`
   .navbar {
-    background-color: #e2e5e6;
+    background-color: #ececec;
   }
 
   .navbar-brand {
@@ -10,7 +10,7 @@ export const Styles = styled.div`
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: #3c64b1;
-    margin-left: 16px;
+    margin-left: 40px;
   }
 
   .navbar-toggler {

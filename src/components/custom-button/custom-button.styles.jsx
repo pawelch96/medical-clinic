@@ -36,7 +36,6 @@ const borderedButtonStyles = css`
   background-color: transparent;
   color: #3c64b1;
   border: 1px solid #3c64b1;
-  margin: 43px;
 
   &:hover {
     color: #2a467b;

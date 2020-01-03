@@ -1,69 +1,85 @@
 import styled from 'styled-components';
 
-export const Styles = styled.div``;
+export const Styles = styled.div`
+  .container-fluid {
+    background-color: #dfe1e6;
+    position: relative;
+    padding: 25px;
+    @media screen and (max-width: 800px) {
+      padding: 8px;
+      align-items: center;
+    }
+  }
 
-export const MainPageContainer = styled.div`
-  height: 672px;
-  width: 100%;
-  background-color: rgba(60, 100, 177, 0.06);
-  display: flex;
-`;
+  .img-fluid {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 75vw;
+    height: auto;
 
-export const ImageContainer = styled.div`
-  height: 88%;
-  width: 64%;
-  box-shadow: 10px 10px 5px lightgray;
-  margin: 40px;
-`;
+    @media screen and (max-width: 800px) {
+      width: 100vw;
+    }
+  }
 
-export const Image = styled.img`
-  height: 100%;
-  width: 100%;
-`;
+  .card {
+    height: auto;
+    max-height: 40vh;
+    width: 35vw;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    position: absolute;
+    bottom: 4vw;
+    right: 9vw;
+    padding: 10px;
 
-export const TextContainer = styled.div`
-  height: 40%;
-  width: 35%;
-  display: block;
-  background-color: rgba(255, 255, 255, 0.9);
-  float: right;
-  margin-right: 60px;
-  margin-bottom: 60px;
-  position: fixed;
-  right: 120px;
-  top: 280px;
-`;
+    @media screen and (max-width: 800px) {
+      width: auto;
+      max-height: 70vh;
+      position: static;
+    }
+  }
 
-export const TextTitle = styled.h2`
-  margin: 10px 18px;
-  font-size: 44px;
-  font-family: 'Muli', sans-serif;
-  display: block;
-  text-align: left;
-  padding-left: 25px;
-  padding-right: 25px;
-`;
+  .card-header {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    font-family: 'Muli', sans-serif;
+    font-weight: 900;
+    font-size: 0.7vw;
+    text-transform: uppercase;
+    color: #3c64b1;
 
-export const TextHeader = styled.span`
-  margin: 10px 18px;
-  font-family: 'Muli', sans-serif;
-  font-weight: 900;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #3c64b1;
-  display: block;
-  text-align: left;
-  padding-left: 25px;
-  padding-right: 25px;
-`;
+    @media screen and (max-width: 800px) {
+      font-size: 14px;
+      font-weight: 800;
+      padding-bottom: 8px;
+      padding-left: 10px;
+    }
+  }
 
-export const TextContent = styled.span`
-  margin: 10px 18px;
-  font-family: 'Muli', sans-serif;
-  font-size: 16px;
-  color: black;
-  display: block;
-  text-align: left;
-  padding-left: 25px;
-  padding-right: 25px;
+  .card-title {
+    font-size: 1.9vw;
+    font-family: 'Muli', sans-serif;
+    font-weight: bolder;
+
+    @media screen and (max-width: 800px) {
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+
+  .card-body {
+    @media screen and (max-width: 800px) {
+      padding: 10px;
+    }
+  }
+
+  .card-text {
+    font-family: 'Muli', sans-serif;
+    font-size: 0.9vw;
+    color: black;
+
+    @media screen and (max-width: 800px) {
+      font-size: 12px;
+    }
+  }
 `;
