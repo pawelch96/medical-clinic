@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import { Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-import CustomButton from '../custom-button/custom-button.component';
+import CustomButton from "../custom-button/custom-button.component";
 
-import { Styles } from './header.styles';
+import { Styles } from "./header.styles";
 
 const Header = () => (
   <Styles>
@@ -25,10 +25,15 @@ const Header = () => (
             </Nav.Link>
           </Nav.Item>
         </Nav>
-        <CustomButton type="button" inverted>
-          Sign In
-        </CustomButton>
-        <CustomButton type="button">Sign Up</CustomButton>
+        <Link to="/signin">
+          <CustomButton type="button" inverted>
+            Sign In
+          </CustomButton>
+        </Link>
+
+        <Link to="/signin">
+          <CustomButton type="button">Sign Up</CustomButton>
+        </Link>
       </Navbar.Collapse>
     </Navbar>
   </Styles>

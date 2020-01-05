@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import { Styles } from './main-container.styles';
+import { Link } from "react-router-dom";
 
-import { Container, Card, Image } from 'react-bootstrap';
+import { Styles } from "./main-container.styles";
 
-import CustomButton from '../custom-button/custom-button.component';
+import { Container, Card, Image } from "react-bootstrap";
+
+import CustomButton from "../custom-button/custom-button.component";
 
 const MainContainer = () => (
   <Styles>
@@ -19,9 +21,11 @@ const MainContainer = () => (
             no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
             molestiae te. Ex duo eripuit mentitum.
           </Card.Text>
-          <CustomButton type="button" bordered>
-            Contact Us
-          </CustomButton>
+          <Link to="/contact">
+            <CustomButton type="button" bordered>
+              Contact Us
+            </CustomButton>
+          </Link>
         </Card.Body>
       </Card>
     </Container>

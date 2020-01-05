@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Medical Clinic",
+  "name": "Medical Clinic Sample App",
   "icons": [
     {
       "src": "favicon.ico",

@@ -19,6 +19,8 @@ export const ErrorImageContainer = styled.div`
 `;
 
 export const ErrorImageText = styled.h2`
+  font-family: "Muli", sans-serif;
+  font-weight: bold;
   font-size: 28px;
   color: #677987;
 `;

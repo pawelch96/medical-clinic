@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Styles = styled.div`
   .container-fluid {
@@ -19,24 +19,16 @@ export const Styles = styled.div`
     }
   }
 
-  .con-1 {
-    background-color: lightskyblue;
-  }
-
-  .row-2 {
-    background-color: red;
-  }
-
-  .row-1 {
-    background-color: yellow;
-  }
-
   .col-1 {
-    background-color: green;
+    @media screen and (max-width: 800px) {
+      padding: 0;
+    }
   }
 
   .col-2 {
-    background-color: brown;
+    @media screen and (max-width: 800px) {
+      padding: 0;
+    }
   }
 
   .img-fluid {
@@ -50,7 +42,6 @@ export const Styles = styled.div`
 
   .left-column {
     position: relative;
-    background-color: lightcyan;
 
     @media screen and (max-width: 800px) {
       padding: 0;
@@ -58,14 +49,17 @@ export const Styles = styled.div`
   }
 
   .right-column {
-    background-color: lightsalmon;
     position: relative;
     padding: 25px;
+
+    @media screen and (max-width: 800px) {
+      padding: 0;
+    }
   }
 
   .bottom-title {
     font-size: 1.7vw;
-    font-family: 'Muli', sans-serif;
+    font-family: "Muli", sans-serif;
     font-weight: bolder;
     color: #373f41;
     padding: 5vw 1vw 2vw 3vw;

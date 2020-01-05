@@ -1,8 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Container, Image, Row, Col } from 'react-bootstrap';
+import { Container, Image, Row, Col } from "react-bootstrap";
 
-import { Styles } from './bottom-container.styles';
+import PreviewComponent from "../preview/preview.component";
+
+import { Styles } from "./bottom-container.styles";
 
 const BottomContainer = () => (
   <Styles>
@@ -16,10 +18,10 @@ const BottomContainer = () => (
           </Row>
           <Row className="row-1">
             <Col className="col-1" xs={12} md={6}>
-              column first
+              <PreviewComponent isDoctor />
             </Col>
             <Col className="col-2" xs={12} md={6}>
-              column second
+              <PreviewComponent />
             </Col>
           </Row>
         </Col>
