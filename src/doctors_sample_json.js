@@ -40,5 +40,19 @@ export const doctors = [
     username: "Leopoldo_Corkery",
     email: "Karley_Dach@jasper.info",
     image: "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    id: 7,
+    name: "Kurtis Weissnat",
+    username: "Elwyn.Skiles",
+    email: "Telly.Hoeger@billy.biz",
+    image: "https://randomuser.me/api/portraits/men/48.jpg"
+  },
+  {
+    id: 8,
+    name: "Nicholas Runolfsdottir V",
+    username: "Maxime_Nienow",
+    email: "Sherwood@rosamond.me",
+    image: "https://randomuser.me/api/portraits/men/71.jpg"
   }
 ];

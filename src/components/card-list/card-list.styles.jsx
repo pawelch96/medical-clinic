@@ -52,7 +52,7 @@ export const Styles = styled.div`
   }
 
   .card-columns {
-    column-count: 3;
+    column-count: 4;
     align-items: center;
 
     @media screen and (max-width: 800px) {
