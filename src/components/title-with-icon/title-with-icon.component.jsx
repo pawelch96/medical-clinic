@@ -19,7 +19,11 @@ const TitleWithIcon = ({ children, ...otherProps }) => (
         <PlaceIconContainer />
         <span>
           Click{" "}
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             this link
           </a>{" "}
           to find us on map!
