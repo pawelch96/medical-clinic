@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Col, Row } from "react-bootstrap";
-import FormInput from "../form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.component";
+import { Col, Row } from 'react-bootstrap';
+import FormInput from '../form-input/form-input.component';
+import CustomButton from '../custom-button/custom-button.component';
 
-import { Styles } from "./contact-form.styles";
+import { Styles } from './contact-form.styles';
 
 const ContactForm = () => {
   const [contactForm, setContactForm] = useState({
-    name: "",
-    secondName: "",
-    email: "",
-    phoneNumber: "",
-    message: ""
+    name: '',
+    secondName: '',
+    email: '',
+    phoneNumber: '',
+    message: ''
   });
 
   const { name, secondName, email, phoneNumber, message } = contactForm;
@@ -38,7 +38,7 @@ const ContactForm = () => {
         <Col>
           <FormInput
             type="text"
-            name="second-name"
+            name="secondName"
             value={secondName}
             onChange={handleChange}
             label="Second Name"
@@ -56,8 +56,8 @@ const ContactForm = () => {
             label="Email"
           />
           <FormInput
-            type="number"
-            name="phone-number"
+            type="tel"
+            name="phoneNumber"
             value={phoneNumber}
             onChange={handleChange}
             label="Phone Number"

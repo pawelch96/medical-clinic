@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-import CustomButton from "../custom-button/custom-button.component";
+import CustomButton from '../custom-button/custom-button.component';
 
-import { Styles } from "./header.styles";
+import { Styles } from './header.styles';
 
 const Header = () => (
   <Styles>
@@ -22,6 +22,11 @@ const Header = () => (
           <Nav.Item>
             <Nav.Link>
               <Link to="/contact">Contact</Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link to="/appointments">Appointments</Link>
             </Nav.Link>
           </Nav.Item>
         </Nav>

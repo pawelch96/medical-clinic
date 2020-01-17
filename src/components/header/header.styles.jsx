@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Styles = styled.div`
   .navbar {
@@ -7,7 +7,7 @@ export const Styles = styled.div`
 
   .navbar-brand {
     font-size: 24px;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: #3c64b1;
     margin-left: 40px;
@@ -24,7 +24,7 @@ export const Styles = styled.div`
   a {
     margin: 0;
     font-size: 18px;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
     color: black;
     font-weight: 600;
     text-transform: uppercase;
@@ -37,7 +37,7 @@ export const Styles = styled.div`
 
   .navbar-nav .nav-item .nav-link {
     font-size: 18px;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
     color: black;
     font-weight: 600;
     text-transform: uppercase;

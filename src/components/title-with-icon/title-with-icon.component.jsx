@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 import {
   Styles,
   HospitalIconContainer,
   PlaceIconContainer,
   EmailIconContainer
-} from "./title-with-icon.styles";
+} from './title-with-icon.styles';
 
 const TitleWithIcon = ({ children, ...otherProps }) => (
   <Styles>
@@ -18,10 +18,14 @@ const TitleWithIcon = ({ children, ...otherProps }) => (
       <div>
         <PlaceIconContainer />
         <span>
-          Click{" "}
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+          Click{' '}
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             this link
-          </a>{" "}
+          </a>{' '}
           to find us on map!
         </span>
       </div>
