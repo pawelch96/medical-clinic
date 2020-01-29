@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 
 import { Container, Row, Col } from "react-bootstrap";
+import { setCurrentUser } from "../../redux/user/user.actions";
 
 import { Styles } from "./sign-in.styles";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
-const SignIn = () => {
+const SignIn = ({ setCurrentUser }) => {
   const [userCredentials, setCredentials] = useState({
     email: "",
     password: ""
@@ -16,6 +18,8 @@ const SignIn = () => {
 
   const handleSubmit = async event => {
     event.preventDefault();
+
+    setCurrentUser(true);
   };
 
   const handleChange = event => {
@@ -58,4 +62,8 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(null, mapDispatchToProps)(SignIn);

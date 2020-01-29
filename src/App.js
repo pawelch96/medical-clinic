@@ -1,32 +1,76 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
+import { selectCurrentUser } from "./redux/user/user.selector";
+import { checkUserSession } from "./redux/user/user.actions";
 
 import { GlobalStyle } from "./global.styles";
 
-import HomePage from "./pages/homepage";
-import StaffPage from "./pages/staff/staffpage";
-import ContactPage from "./pages/contact/contactpage";
-import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
+// import HomePage from "./pages/homepage";
+// import StaffPage from "./pages/staff/staffpage";
+// import ContactPage from "./pages/contact/contactpage";
+// import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
 import Header from "./components/header/header.component";
-import ErrorBoundary from "./components/error-boundary/error-boundary.component";
+// import ErrorBoundary from "./components/error-boundary/error-boundary.component";
+import Spinner from "./components/spinner/spinner.component";
 
-function App() {
-  return (
-    <React.Fragment>
-      <Router>
-        <GlobalStyle />
-        <Header />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/staff" component={StaffPage} />
-          <Route exact path="/contact" component={ContactPage} />
-          <Route exact path="/signin" component={SignInAndSignUpPage} />
-          <Route component={ErrorBoundary} />
-        </Switch>
-      </Router>
-    </React.Fragment>
-  );
+const HomePage = lazy(() => import("./pages/homepage/homepage"));
+const StaffPage = lazy(() => import("./pages/staff/staffpage"));
+const ContactPage = lazy(() => import("./pages/contact/contactpage"));
+const SignInAndSignUpPage = lazy(() =>
+  import("./pages/sign-in-and-sign-up/sign-in-and-sign-up")
+);
+
+class App extends React.Component {
+  componentDidMount() {
+    const { checkUserSession } = this.props;
+    checkUserSession();
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Router>
+          <GlobalStyle />
+          <Header />
+          <Switch>
+            <Suspense fallback={<Spinner />}>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/staff" component={StaffPage} />
+              <Route exact path="/contact" component={ContactPage} />
+              <Route
+                exact
+                path="/signin"
+                render={() =>
+                  this.props.currentUser ? (
+                    <Redirect to="/" />
+                  ) : (
+                    <SignInAndSignUpPage />
+                  )
+                }
+              />
+            </Suspense>
+          </Switch>
+        </Router>
+      </React.Fragment>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+});
+
+const mapDispatchToProps = dispatch => ({
+  checkUserSession: () => dispatch(checkUserSession())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
