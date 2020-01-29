@@ -40,7 +40,7 @@ const Header = ({ currentUser, setCurrentUser, history }) => {
           {currentUser ? (
             <Nav.Item>
               <Nav.Link>
-                <Link to="/staff">appointments</Link>
+                <Link to="/appointments">appointments</Link>
               </Nav.Link>
             </Nav.Item>
           ) : (

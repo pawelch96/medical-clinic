@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Styles = styled.div`
   .title-row {
@@ -28,6 +28,8 @@ export const Styles = styled.div`
 
     @media screen and (max-width: 800px) {
       width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -37,7 +39,7 @@ export const Styles = styled.div`
 
   h2 {
     font-size: 1.9vw;
-    font-family: "Muli", sans-serif;
+    font-family: 'Muli', sans-serif;
     font-weight: bolder;
     margin: auto;
     padding-bottom: 1vw;
@@ -50,7 +52,7 @@ export const Styles = styled.div`
 
   h4 {
     font-size: 1.2vw;
-    font-family: "Muli", sans-serif;
+    font-family: 'Muli', sans-serif;
     font-weight: bold;
     margin: auto;
     color: #373f41;

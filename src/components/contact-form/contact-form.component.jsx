@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Alert } from "react-bootstrap";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
@@ -15,6 +15,8 @@ const ContactForm = () => {
     message: ""
   });
 
+  const [show, setShow] = useState(false);
+
   const { name, secondName, email, phoneNumber, message } = contactForm;
   const handleChange = event => {
     const { name, value } = event.target;
@@ -22,9 +24,33 @@ const ContactForm = () => {
     setContactForm({ ...contactForm, [name]: value });
   };
 
+  const handleSubmit = async event => {
+    event.preventDefault();
+
+    if (
+      name === "" ||
+      secondName === "" ||
+      email === "" ||
+      phoneNumber === "" ||
+      message === ""
+    ) {
+      setShow(true);
+      return;
+    } else alert("Thank you for your message!");
+  };
+
   return (
     <Styles>
       <Row>
+        <Alert
+          variant="danger"
+          show={show}
+          onClose={() => setShow(false)}
+          dismissible
+        >
+          <Alert.Heading>Warning!</Alert.Heading>
+          <p>All fields must be filled!</p>
+        </Alert>
         <Col>
           <FormInput
             type="text"
@@ -38,7 +64,7 @@ const ContactForm = () => {
         <Col>
           <FormInput
             type="text"
-            name="second-name"
+            name="secondName"
             value={secondName}
             onChange={handleChange}
             label="Second Name"
@@ -47,7 +73,7 @@ const ContactForm = () => {
         </Col>
       </Row>
       <Row>
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={handleSubmit}>
           <FormInput
             type="email"
             name="email"
@@ -56,8 +82,8 @@ const ContactForm = () => {
             label="Email"
           />
           <FormInput
-            type="number"
-            name="phone-number"
+            type="tel"
+            name="phoneNumber"
             value={phoneNumber}
             onChange={handleChange}
             label="Phone Number"
@@ -69,8 +95,11 @@ const ContactForm = () => {
             onChange={handleChange}
             label="Message"
           />
+
+          <CustomButton type="submit" id="submit-form-button">
+            Submit
+          </CustomButton>
         </form>
-        <CustomButton id="submit-form-button">Submit</CustomButton>
       </Row>
     </Styles>
   );

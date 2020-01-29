@@ -14,16 +14,13 @@ import { checkUserSession } from "./redux/user/user.actions";
 
 import { GlobalStyle } from "./global.styles";
 
-// import HomePage from "./pages/homepage";
-// import StaffPage from "./pages/staff/staffpage";
-// import ContactPage from "./pages/contact/contactpage";
-// import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
 import Header from "./components/header/header.component";
 // import ErrorBoundary from "./components/error-boundary/error-boundary.component";
 import Spinner from "./components/spinner/spinner.component";
 
 const HomePage = lazy(() => import("./pages/homepage/homepage"));
 const StaffPage = lazy(() => import("./pages/staff/staffpage"));
+const AppointmentPage = lazy(() => import("./pages/appointment/appointment"));
 const ContactPage = lazy(() => import("./pages/contact/contactpage"));
 const SignInAndSignUpPage = lazy(() =>
   import("./pages/sign-in-and-sign-up/sign-in-and-sign-up")
@@ -46,6 +43,7 @@ class App extends React.Component {
               <Route exact path="/" component={HomePage} />
               <Route exact path="/staff" component={StaffPage} />
               <Route exact path="/contact" component={ContactPage} />
+              <Route exact path="/appointments" component={AppointmentPage} />
               <Route
                 exact
                 path="/signin"

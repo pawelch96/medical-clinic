@@ -21,10 +21,16 @@ const PreviewComponent = ({ children, ...otherProps }) => {
               <CareIconContainer />
             )}
           </div>
-          <div className="text">
-            Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
-            no suscipit quaerendum.
-          </div>
+          {otherProps.isDoctor ? (
+            <div className="text">
+              We are constantly developing and improving to meet your
+              requirements
+            </div>
+          ) : (
+            <div className="text">
+              Our staff will do everything to make you feel calm and safe
+            </div>
+          )}
         </Col>
       </Styles>
     </StyledLink>

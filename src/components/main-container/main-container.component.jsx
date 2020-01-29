@@ -17,9 +17,8 @@ const MainContainer = () => (
         <Card.Body>
           <Card.Title>We offer the best quality of service</Card.Title>
           <Card.Text>
-            Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
-            no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
-            molestiae te. Ex duo eripuit mentitum.
+            We guarantee the highest quality of services and satisfaction after
+            each visit
           </Card.Text>
           <Link to="/contact">
             <CustomButton type="button" bordered>
