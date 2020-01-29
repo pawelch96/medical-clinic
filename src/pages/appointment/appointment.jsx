@@ -26,7 +26,7 @@ const AppointmentPage = () => {
     const appTime = time;
     const appDate = `${date.getFullYear()}/${date.getMonth() +
       1}/${date.getDate()}`;
-    alert(`You made an appointment with ${doc} on ${appDate} at ${appTime}`);
+    alert(`You made an appointment on ${appDate} at ${appTime}`);
   };
 
   const onSelect = doctor => {
