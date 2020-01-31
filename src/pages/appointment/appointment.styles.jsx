@@ -38,7 +38,6 @@ export const Styles = styled.div`
   .text {
     font-family: 'Muli', sans-serif;
     font-size: 1.2vw;
-    color: black;
     letter-spacing: 0.3px;
     width: 30vw;
     color: #e9e9e9;
